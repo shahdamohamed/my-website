@@ -1,201 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shahda Mohamed - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Shahda Mohamed</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-      <div class="header-content">
-        <div class="profile-image">
-          <img src="images/WhatsApp Image 2025-04-27 at 07.45.20_d27e9b32.jpg" alt="Shahda Mohamed">
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Shahda Mohamed</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="header-text">
-          <h1>Shahda Mohamed</h1>
-          <p>Backend Developer</p>
-          <a href="files/shahda.pdf" class="download-cv-btn" target="_blank">
-            <i class="fas fa-download"></i>
-            Download CV
-          </a>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
-    </div>
-  </header>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="about-container">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p class="intro-text">Hello! I'm Shahda Mohamed, a passionate Backend Developer.</p>
-          
-          <div class="about-details">
-            <div class="about-section">
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile_pic.jpg" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Shahda Mohamed</h1>
+        <p class="section__text__p2">Backend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/shahda-mohamed-178537280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/shahdamohamed'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about_me.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/Focus_On.png"
+                alt="Experience icon"
+                class="icon"
+              />
               <h3>Focus On</h3>
               <p>I specialize in building efficient and scalable back-end systems using technologies like Python, Django, and MySQL. I enjoy tackling complex problems and finding creative solutions to improve user experiences.</p>
             </div>
-
-            <div class="about-section">
-              <h3>Education & Experience</h3>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
               <p>I am currently pursuing a Bachelor's degree in Computer Science at Benha National University, where I've gained hands-on experience in software development, algorithms, and data structures. My experience includes developing RESTful APIs, working with databases, and implementing security measures to protect user data.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="skills-container">
-      <h2>Skills</h2>
-      <div class="skills-content">
-        <div class="skills-grid">
-          <div class="skill-section">
-            <div class="skill-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>Programming</h3>
-            <ul>
-              <li>C++</li>
-              <li>Python</li>
-              <li>PHP</li>
-              <li>Dart</li>
-              <li>Javascript</li>
-            </ul>
-          </div>
-
-          <div class="skill-section">
-            <div class="skill-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3>Web Development</h3>
-            <ul>
-              <li>Django, DRF</li>
-              <li>HTML, CSS</li>
-            </ul>
-          </div>
-
-          <div class="skill-section">
-            <div class="skill-icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3>Databases</h3>
-            <ul>
-              <li>MySQL, SQLite</li>
-            </ul>
-          </div>
-
-          <div class="skill-section">
-            <div class="skill-icon">
-              <i class="fab fa-git-alt"></i>
-            </div>
-            <h3>Version Control</h3>
-            <ul>
-              <li>Git, GitHub</li>
-            </ul>
-          </div>
-
-          <div class="skill-section">
-            <div class="skill-icon">
-              <i class="fas fa-network-wired"></i>
-            </div>
-            <h3>Web Technologies</h3>
-            <ul>
-              <li>RESTful APIs, HTTP/HTTPS</li>
-            </ul>
+          <div class="text-container">
+            <p>
+              Over the past year, I've been working with Django and Django REST Framework, building projects like to-do list apps, and event booking systems. I'm also learning how to integrate APIs and implement authentication systems such as JWT.<br> 
+              I'm constantly exploring new technologies and improving my skills through hands-on projects.
+              My goal is to become a professional backend developer and contribute to impactful software that makes life easier for users. When I’m not coding, you’ll find me exploring open-source projects, learning about software architecture, or helping others understand backend development concepts.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects-container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-section">
-          <div class="project-image">
-            <i class="fas fa-tasks"></i>
-          </div>
-          <div class="project-content">
-            <h3>To-Do List Web App</h3>
-            <p>A full-stack web application developed using Django. This project allows users to manage daily tasks with features such as task creation, updating, deletion, and user authentication.</p>
-            <div class="project-tech">
-              <span>Django</span>
-              <span>Python</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>MySQL</span>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Dart</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
             </div>
-            <a href="https://github.com/shahdamohamed/to-do-list" class="btn-project" target="_blank">
-              <i class="fab fa-github"></i>
-              View Project
-            </a>
           </div>
-        </div>
-
-        <div class="project-section">
-          <div class="project-image">
-            <i class="fas fa-ticket-alt"></i>
-          </div>
-          <div class="project-content">
-            <h3>Cinema Ticket Reservation</h3>
-            <p>A cinema ticket reservation system built with Django REST Framework. Users can browse movies, select showtimes, and reserve tickets. The system implements JWT authentication for secure user management.</p>
-            <div class="project-tech">
-              <span>Django</span>
-              <span>DRF</span>
-              <span>JWT</span>
-              <span>MySQL</span>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django Rest Framework</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL, SQLite</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTTP/HTTPs</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git & Github</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
             </div>
-            <a href="https://github.com/shahdamohamed/cinema-reservation" class="btn-project" target="_blank">
-              <i class="fab fa-github"></i>
-              View Project
-            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-info">
-          <h3>Shahda Mohamed</h3>
-          <p>Backend Developer</p>
-        </div>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/your-github-username" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:your.email@example.com" target="_blank" aria-label="Gmail">
-            <i class="fas fa-envelope"></i>
-          </a>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/to_do_list.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">To Do List Web App</h2>
+            <p>A Full Stack Web Application Designed For Manging Daily Tasks. <br><br><br><br><br><br></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shahdamohamed/to-do-list'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/cinema.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Cinema Tickets Reservation API</h2>
+            <p> A RESTful API To Book Tickets for Cinema, and User Authentication<br><br><br><br></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shahdamohamed/cinema-reservation'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/event.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Event Booking API</h2>
+            <p> A RESTful API for Event Booking System, with JWT Authentication<br><br><br><br><br></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shahdamohamed/Event-Booking'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/store.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Store Management System</h2>
+            <p>A DataBase system using MYSQL. <br><br><br><br></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shahdamohamed/store_managment_system'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/ping.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Ping Pong game</h2>
+            <p>Usinf=g python and Turtle. <br> <br></p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/shahdamohamed/ping-pong-game'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-</body>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:shahdamohamedabotalb@gmail.com">shahdamohamedabotalb@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/shahda-mohamed-178537280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
