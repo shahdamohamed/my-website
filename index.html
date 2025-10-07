@@ -19,6 +19,9 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+      </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Shahda Mohamed</div>
@@ -34,6 +37,9 @@
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn-mobile" onclick="toggleTheme()">🌙</button>
       </div>
     </nav>
     <section id="profile">
@@ -276,107 +282,157 @@
       />
     </section>
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/to_do_list.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">To Do List Web App</h2>
-            <p>A Full Stack Web Application Designed For Manging Daily Tasks. <br><br><br><br><br><br></p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/shahdamohamed/to-do-list'"
-              >
-                Github
-              </button>
+      <div class="projects-header">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+      </div>
+      
+      <div class="projects-list">
+        <div class="project-item" data-category="web">
+          <div class="project-header-list">
+            <div class="project-title-info">
+              <h3 class="project-title">To Do List Web App</h3>
+              <span class="project-category">Web Application</span>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/cinema.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Cinema Tickets Reservation API</h2>
-            <p> A RESTful API To Book Tickets for Cinema, and User Authentication<br><br><br><br></p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/shahdamohamed/cinema-reservation'"
-              >
-                Github
-              </button>
+          
+          <p class="project-description">
+            A Full Stack Web Application Designed For Managing Daily Tasks.
+          </p>
+          
+          <div class="project-details">
+            <div class="project-tech-list">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Backend: Django (Python)</span>
+                <span class="tech-tag">Frontend: HTML, CSS</span>
+                <span class="tech-tag">Database: SQLite</span>
+              </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/event.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Event Booking API</h2>
-            <p> A RESTful API for Event Booking System, with JWT Authentication<br><br><br><br><br></p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/shahdamohamed/Event-Booking'"
-              >
-                Github
-              </button>
+          
+          <div class="project-actions">
+            <a href="https://github.com/shahdamohamed/to-do-list" class="project-btn secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item" data-category="backend">
+          <div class="project-header-list">
+            <div class="project-title-info">
+              <h3 class="project-title">Cinema Tickets Reservation API</h3>
+              <span class="project-category">Backend System</span>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/store.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Store Management System</h2>
-            <p>A DataBase system using MYSQL. <br><br><br><br></p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/shahdamohamed/store_managment_system'"
-              >
-                Github
-              </button>
+          
+          <p class="project-description">
+            A RESTful API To Book Tickets for Cinema, and User Authentication
+          </p>
+          
+          <div class="project-details">
+            <div class="project-tech-list">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Django REST Framework</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">JWT + OTP</span>
+                <span class="tech-tag">Stripe Payments</span>
+              </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ping.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
+          
+          <div class="project-actions">
+            <a href="https://github.com/shahdamohamed/cinema-reservation" class="project-btn secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item" data-category="web">
+          <div class="project-header-list">
+            <div class="project-title-info">
+              <h3 class="project-title">Event Booking System</h3>
+              <span class="project-category">Web Application</span>
             </div>
-            <h2 class="experience-sub-title project-title">Ping Pong game</h2>
-            <p>Usinf=g python and Turtle. <br> <br></p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/shahdamohamed/ping-pong-game'"
-              >
-                Github
-              </button>
+          </div>
+          
+          <p class="project-description">
+           A RESTful API for Event Booking System, with JWT Authentication
+          </p>
+          
+          <div class="project-details">
+            <div class="project-tech-list">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Django REST Framework</span>
+                <span class="tech-tag">JWT Authentication</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">JSON APIs</span>
+              </div>
             </div>
+          </div>
+          
+          <div class="project-actions">
+            <a href="https://github.com/shahdamohamed/event-booking" class="project-btn secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item" data-category="database">
+          <div class="project-header-list">
+            <div class="project-title-info">
+              <h3 class="project-title">Store Management System</h3>
+              <span class="project-category">Database System</span>
+            </div>
+          </div>
+          
+          <p class="project-description">
+            A Database system using MySQL for comprehensive store management.
+          </p>
+          
+          <div class="project-details">
+            <div class="project-tech-list">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Data Integrity</span>
+                <span class="tech-tag">Constraints</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-actions">
+            <a href="https://github.com/shahdamohamed/store_managment_system" class="project-btn secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-item" data-category="game">
+          <div class="project-header-list">
+            <div class="project-title-info">
+              <h3 class="project-title">Ping Pong Game</h3>
+              <span class="project-category">Game Development</span>
+            </div>
+          </div>
+          
+          <p class="project-description">
+            A classic Ping Pong game developed using Python and the Turtle library. Features two-player gameplay with smooth controls and score tracking.
+          </p>
+          
+          <div class="project-details">
+            <div class="project-tech-list">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Turtle Graphics</span>
+                <span class="tech-tag">Game Logic</span>
+                <span class="tech-tag">Event Handling</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-actions">
+            <a href="https://github.com/shahdamohamed/ping-pong-game" class="project-btn secondary">GitHub</a>
           </div>
         </div>
       </div>
+      
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -389,20 +445,50 @@
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
+          <a href="mailto:shahdamohamedabotalb@gmail.com" target="_blank">
+            <img
+            src="./assets/email(2).png"
             alt="Email icon"
-            class="icon contact-icon email-icon"
+            class="icon contact-icon"
           />
-          <p><a href="mailto:shahdamohamedabotalb@gmail.com">shahdamohamedabotalb@gmail.com</a></p>
+          </a>
         </div>
         <div class="contact-info-container">
-          <img
+          <a href="https://www.linkedin.com/in/shahda-mohamed-178537280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <img
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/shahda-mohamed-178537280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></p>
+          </a>
+        </div>
+        <div class="contact-info-container">
+          <a href="https://www.facebook.com/share/1JW3SmUKF9/?mibextid=wwXIfr" target="_blank">
+            <img
+            src="https://img.icons8.com/?size=100&id=118467&format=png&color=000000"
+            alt="Facebook icon"
+            class="icon contact-icon"
+          />
+          </a>
+          
+        </div>
+        <div class="contact-info-container">
+          <a href="https://www.instagram.com/shahda2212?igsh=MTd3MHoxcGQ0bTNjbw%3D%3D&utm_source=qr" target="_blank">
+            <img
+            src="https://img.icons8.com/?size=100&id=32309&format=png&color=000000"
+            alt="Instagram icon"
+            class="icon contact-icon"
+          />
+          </a>
+        </div>
+        <div class="contact-info-container">
+          <a href="https://x.com/shahda_2212?s=21" target="_blank">
+            <img
+            src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000"
+            alt="X icon"
+            class="icon contact-icon"
+          />
+          </a>
         </div>
       </div>
     </section>
